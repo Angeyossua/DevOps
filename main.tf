@@ -41,7 +41,7 @@ resource "aws_instance" "Jenkins" {
 resource "aws_instance" "Prometheus-Grafana" {
   ami                    = "ami-0c7217cdde317cfec"  #change Ami if you different region
   instance_type          = "t2.micro"
-  key_name               = "myKeyPairDevOps"
+  key_name               = "myKeyPairDevops"
   vpc_security_group_ids = [aws_security_group.devOps-sg.id]
   user_data              = templatefile("./install_prometheus_grafana.sh", {})
   tags = {
