@@ -13,7 +13,7 @@ services:
       MYSQL_PASSWORD: admin
 
   glpi:
-    image: diouxx/glpi
+    image: angeyossua/glpi
     depends_on:
       - db
     ports:
